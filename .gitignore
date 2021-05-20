@@ -1,4 +1,6 @@
+.vscode
 .coverage
 .commandpipe
+commandpipe
 node_modules
 build
