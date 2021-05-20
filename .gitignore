@@ -1,0 +1,4 @@
+.coverage
+.commandpipe
+node_modules
+build
