@@ -1,5 +1,6 @@
 build:
 	(cd ./pythoncalctest && python3 -m pip install -r requirements.txt)
+
 run-main:
 	python3 ./pythoncalctest/main.py
 
