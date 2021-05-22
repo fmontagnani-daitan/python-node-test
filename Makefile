@@ -6,4 +6,4 @@ run-main:
 
 coverage:
 	rm -rf ./pythoncalctest/build
-	(cd ./pythoncalctest && python3 -m pytest --cov=./src --cov-report term-missing --cov-report html:build/reports)
+	(cd ./pythoncalctest && python3 -m pytest --cov=./ --cov-report term-missing --cov-report html:build/reports)

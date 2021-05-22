@@ -10,8 +10,8 @@ def main(operation_code, num1, num2):
 
 
 if __name__ == '__main__':
-    main(0, 1, 1)
-    main(1, 1, 1)
-    main(2, 1, 1)
-    main(3, 1, 1)
-    main(3, 1, 'e')
+    main(0, 1, 1)   # pragma: no cover
+    main(1, 1, 1)   # pragma: no cover
+    main(2, 1, 1)   # pragma: no cover
+    main(3, 1, 1)   # pragma: no cover
+    main(3, 1, 'e') # pragma: no cover

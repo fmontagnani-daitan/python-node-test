@@ -4,10 +4,10 @@ from unittest.mock import patch, call, MagicMock
 from src.calculator.calculator import Calculator  # pylint: disable=import-error
 
 class TestCalculator(TestCase):
-    calculator = None
+    calculator = None   #useless: just to demonstrate
 
     def setUp(self):
-        if self.calculator is None:
+        if self.calculator is None: #useless: just to demonstrate
             self.calculator = Calculator()
 
         self.num1 = 1
@@ -25,7 +25,8 @@ class TestCalculator(TestCase):
 
     def test_calculator_soma(self):
         with patch('src.calculator.calculator.soma', MagicMock()) as mocked_operation:
-            # self.calculator.executeOperation(0, self.num1, self.num2)
+            # it will fail since self.calculator was instantiated outside scope
+            # self.calculator.execute_operation(0, self.num1, self.num2)
             calculator = Calculator()
             calculator.execute_operation(0, self.num1, self.num2)
             
