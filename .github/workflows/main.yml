@@ -9,7 +9,7 @@ jobs:
       runs-on: ubuntu-latest
       
       steps:
-        - uses: fmontagnani-daitan/pr_approver_test@v1
+        - uses: fmontagnani-daitan/pr_approver_test@v1.0
           with:
             token:  ${{ secrets.GITHUB_TOKEN }}
             label: sync
