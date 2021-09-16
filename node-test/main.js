@@ -1,5 +1,7 @@
 import calculator from './calculator.js';
 
+// Simply adding a comment to test action
+
 export const main = () => {
     const args = process.argv.slice(2);
     const operationNum = Number(args[0]);
