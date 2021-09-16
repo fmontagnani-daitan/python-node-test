@@ -2,7 +2,7 @@ name: PR Sync approval
 
 on:
   pull_request:
-    types: [opened, labelled]
+    types: [opened, labeled]
 
 jobs:
   pr_sync_approval:
