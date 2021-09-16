@@ -2,7 +2,7 @@ name: PR Sync approval
 
 on:
   pull_request:
-    types: [opened, labelled]
+    types: [opened, labeled]
 
 jobs:
   pr_sync_approval:
@@ -12,4 +12,4 @@ jobs:
         - uses: fmontagnani-daitan/pr_approver_test@v1.0
           with:
             token:  ${{ secrets.GITHUB_TOKEN }}
-            label: sync
+            target-label: sync
