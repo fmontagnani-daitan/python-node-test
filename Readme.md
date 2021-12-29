@@ -19,6 +19,6 @@ Inside node-test dir, run the following scripts:
   * npm test -> Run test suite with coverage report (node-test/build/index.html)
 
 **PYTHON APP**
-On project's root dir, run the following scripts:
+Inside pythoncalctest dir, run the following scripts:
   * make run-main -> Executes main.py
   * make coverage test -> Run test suite with coverage report (pythoncalctest/build/reports/index.html)
