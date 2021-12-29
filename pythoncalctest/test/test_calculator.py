@@ -14,18 +14,12 @@ class TestCalculator(TestCase):
         self.num2 = 2
 
     def test_validate_options_operand_error(self):
-        try:
+        with pytest.raises(TypeError, match='Error: Operands must be numbers') as ex:
             self.calculator.validate_options(0, 'a', 2)
-        except Exception as e:
-            assert isinstance(e, TypeError)
-            assert str(e) == 'Error: Operands must be numbers'
 
     def test_validate_options_option_error(self):
-        try:
+        with pytest.raises(ValueError, match='Operation code must be between 0 and 3') as ex:
             self.calculator.validate_options(5, 1, 2)
-        except Exception as e:
-            assert isinstance(e, ValueError)
-            assert str(e) == 'Operation code must be between 0 and 3'
 
     def test_calculator_soma(self):
         with patch('src.calculator.calculator.soma', MagicMock()) as mocked_operation:
