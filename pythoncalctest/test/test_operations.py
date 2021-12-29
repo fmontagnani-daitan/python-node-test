@@ -1,7 +1,6 @@
 import pytest
 from src.operations.operations import soma, multiply, subtract, divide # pylint: disable=import-error
 
-
 @pytest.fixture(name="num1")
 def set_num_1():
     num1 = 1
@@ -11,7 +10,6 @@ def set_num_1():
 def set_num_2():
     num2 = 2
     return num2
-
 
 def test_soma(num1, num2):
     assert soma(num1, num2) == 3
