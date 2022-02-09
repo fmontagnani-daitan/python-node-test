@@ -23,25 +23,25 @@ describe('[CALCULATOR OBJECT]', () => {
     });
     
     it('should call an add operation with correct params', () => {
-        calculator[0](num1, num2);
+        calculator.execute(0, num1, num2);
 
         expect(add).toHaveBeenCalledWith(num1, num2);
     });
 
     it('should call an subtract operation with correct params', () => {
-        calculator[1](num1, num2);
+        calculator.execute(1, num1, num2);
 
         expect(subtract).toHaveBeenCalledWith(num1, num2);
     });
 
     it('should call an multiplication operation with correct params', () => {
-        calculator[2](num1, num2);
+        calculator.execute(2, num1, num2);
 
         expect(multiply).toHaveBeenCalledWith(num1, num2);
     });
 
     it('should call an divide operation with correct params', () => {
-        calculator[3](num1, num2);
+        calculator.execute(3, num1, num2);
 
         expect(divide).toHaveBeenCalledWith(num1, num2);
     });
@@ -49,9 +49,17 @@ describe('[CALCULATOR OBJECT]', () => {
     it('should throw error on invalid param', () => {
         num1 = 'a'
         try{
-            calculator[0](num1, num2);
+            calculator.execute(0, num1, num2);
         } catch (error) {
-            expect(error.toString()).toEqual('Error: Operands must be numbers')
+            expect(error.toString()).toEqual('Error: Operands must be numbers');
+        }
+    });
+
+    it('should throw error on invalid option', () => {
+        try{
+            calculator.execute('a', num1, num2);
+        } catch (error) {
+            expect(error.toString()).toEqual('Error: Operation code must be between 0 and 3');
         }
     });
 });

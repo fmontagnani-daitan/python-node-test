@@ -7,7 +7,7 @@ export const main = () => {
     const num2 = Number(args[2]);
 
     try {
-        const result = calculator[operationNum](num1, num2);
+        const result = calculator.execute(operationNum, num1, num2);
         console.log('Result is: ', result);
     } catch (error) {
         console.log(error.toString());
