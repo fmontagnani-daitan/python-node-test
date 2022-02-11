@@ -6,7 +6,7 @@ run-main:
 
 coverage:
 	rm -rf ./build
-	python3 -m pytest -vv ./test --cov=./src --cov-report term-missing --cov-report html:build/reports
+	python3 -m pytest -vv --cov-config=.coveragerc --cov=. --cov-report term-missing --cov-report html:build/reports --cov-branch --cov-fail-under=95
 
 lint:
 	pylint ./src
